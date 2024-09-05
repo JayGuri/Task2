@@ -1,0 +1,144 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the entire app */
+.App {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Calendar grid styling */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual day cell styling */
+.calendar-grid > div {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    text-align: center;
+    background-color: #fafafa;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Day cell hover effect */
+.calendar-grid > div:hover {
+    background-color: #f0f0f0;
+}
+
+/* Styling for event labels */
+.event {
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    color: #fff;
+    text-align: center;
+}
+
+/* Color theme for imported events */
+.event.imported {
+    background-color: #2e86de; /* Blue for imported events */
+}
+
+/* Color theme for manually added events */
+.event.manual {
+    background-color: #38c172; /* Green for manually added events */
+}
+
+/* Modal styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-actions button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.modal-actions button:first-child {
+    background-color: #38c172; /* Green for save button */
+    color: white;
+}
+
+.modal-actions button:first-child:hover {
+    background-color: #32a760;
+}
+
+.modal-actions button:last-child {
+    background-color: #e3342f; /* Red for delete button */
+    color: white;
+}
+
+.modal-actions button:last-child:hover {
+    background-color: #cc1f1a;
+}
+
+.modal-actions button.cancel {
+    background-color: #6c757d; /* Gray for cancel button */
+    color: white;
+}
+
+.modal-actions button.cancel:hover {
+    background-color: #5a6268;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: #2d3748;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Styling for days of the week */
+.calendar-grid > div.day-of-week {
+    font-weight: bold;
+    background-color: #e0e7ff;
+    border: none;
+    color: #2d3748;
+}
