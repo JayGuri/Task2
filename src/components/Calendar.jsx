@@ -34,7 +34,7 @@ const Calendar = () => {
         localStorage.setItem('userEvents', JSON.stringify(userEvents));
     }, [events]);
 
-    const daysInMonth = getDaysInMonth(new Date(2019, 7)); // August 2019
+    const daysInMonth = getDaysInMonth(new Date(2019, 7)); 
     const startDay = startOfMonth(new Date(2019, 7)).getDay();
 
     const handleDayClick = (day) => {
