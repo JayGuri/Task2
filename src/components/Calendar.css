@@ -1,0 +1,238 @@
+.calendar-container {
+    font-family: Arial, sans-serif;
+    max-width: 90%;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.calendar-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 2rem;
+}
+
+.calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.nav-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #0056b3;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+    grid-auto-rows: minmax(8rem, auto);
+    width: 100%;
+}
+
+.calendar-cell {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    color: #007BFF;
+    cursor: pointer;
+    background-color: white;
+    min-height: 8rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.calendar-cell.empty {
+    border: none;
+    background-color: transparent;
+}
+
+.calendar-cell.today {
+    background-color: #e9ecef;
+}
+
+.day-number {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.events-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.event-item {
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    transition: background-color 0.2s ease;
+}
+
+.event-item.imported {
+    background-color: #007BFF;
+    color: white;
+}
+
+.event-item.user-added {
+    background-color: #28a745;
+    color: white;
+}
+
+.event-item.imported:hover {
+    background-color: #0056b3;
+}
+
+.event-item.user-added:hover {
+    background-color: #218838;
+}
+
+.event-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.event-title:hover {
+    text-decoration: underline;
+}
+
+/* Event Dialog Styles */
+.event-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.event-dialog {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    min-width: 300px;
+    max-width: 500px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.event-dialog-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+    padding: 0.5rem;
+}
+
+.close-button:hover {
+    color: #333;
+}
+
+.event-dialog-content {
+    word-break: break-word;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Add these styles to your existing Calendar.css file */
+
+.event-item, .task-item {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 2px 4px;
+    margin-bottom: 2px;
+    border-radius: 2px;
+    font-size: 0.8em;
+}
+
+.event-item {
+    background-color: #e6f3ff;
+}
+
+.task-item {
+    background-color: #fff0e6;
+}
+
+.past-date {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.task-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-dialog {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.task-dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.task-dialog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
